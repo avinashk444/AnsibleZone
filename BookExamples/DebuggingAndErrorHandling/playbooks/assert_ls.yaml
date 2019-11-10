@@ -8,3 +8,4 @@
     assert:
       that:
       - "'testfile.txt' in list_files.stdout_lines"
+- hosts: 
