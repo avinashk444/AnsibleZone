@@ -8,7 +8,7 @@
         name: "nginx"
         image: "nginx"
         state: started
-		restart: yes
+	restart: yes
         env:
            mysql: "mysql-h localhost:3399"
         exposed_ports:
