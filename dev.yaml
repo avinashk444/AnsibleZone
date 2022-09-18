@@ -6,6 +6,15 @@
     - name: Spin up a container
       docker_container:
         state: started
-        image: busybox:latest
-        command: sh -c "while true; do sleep 1000; done"
+        image: nginx:latest
+        restart: yes
+        name: "nginx"
+        env:
+           mysql: "mysql-h localhost:3399"
+        exposed_ports:
+          - 80
+        volumes:
+          - /home/ubuntu/docker/  
+        env_file: /home/ubuntu/docker/dev.env  
+        
    
