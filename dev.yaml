@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  become: yes
+  gather_facts: true
+  tasks:
+    - name: nginx
+      docker_container:
+        name: "nginx"
+        image: "nginx"
+        state: started
+		restart: yes
+        env:
+           mysql: "mysql-h localhost:3399"
+        exposed_ports:
+          - 80
+		volumes:
+          - /home/ubuntu/docker/  
+        env_file: /home/ubuntu/docker/dev.env
