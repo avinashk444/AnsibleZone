@@ -3,5 +3,9 @@
   become: yes
   gather_facts: true
   tasks:
-    ping:
+    - name: Spin up a container
+      docker_container:
+        state: started
+        image: busybox:latest
+        command: sh -c "while true; do sleep 1000; done"
    
