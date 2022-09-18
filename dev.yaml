@@ -3,9 +3,4 @@
   become: yes
   gather_facts: true
   tasks:
-    - name: nginx
-      docker_container:
-        name: "nginx"
-        image: "nginx"
-        state: started
-	restart: yes
+   
