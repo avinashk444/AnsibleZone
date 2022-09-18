@@ -9,4 +9,3 @@
         image: "nginx"
         state: started
 	restart: yes
-       
