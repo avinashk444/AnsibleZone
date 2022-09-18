@@ -13,7 +13,7 @@
         env:
            mysql: "mysql-h localhost:3399"
         exposed_ports:
-          - 80
+          - 80:80
         volumes:
           - /home/ubuntu/docker/  
         env_file: /home/ubuntu/docker/dev.env  
